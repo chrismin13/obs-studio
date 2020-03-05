@@ -451,7 +451,7 @@ static void add_file(struct vlc_source *c, struct darray *array,
 						 network_caching_option.array);
 			dstr_free(&network_caching_option);
 		}
-		libvlc_media_add_option_(new_media,":avcodec-hw=any");
+		libvlc_media_add_option_(new_media,":avcodec-hw=vaapi");
 		struct dstr track_option = {0};
 		dstr_catf(&track_option, ":audio-track=%d", track_index - 1);
 		libvlc_media_add_option_(new_media, track_option.array);
